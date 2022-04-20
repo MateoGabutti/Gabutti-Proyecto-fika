@@ -8,7 +8,7 @@ body{
 }
 nav{
     text-align: center;
-    background-image: url(imagenes/fondonav.jpg);
+    background-image: linear-gradient(to right, red, orange, yellow);
     display: flex;
     justify-content: space-between;
 }
@@ -1099,6 +1099,14 @@ h3{
 /*index*/
 /*index*/
 /*index*/
+.rotar{
+    background-color: aqua;
+    transition: height, width, 2s;
+}
+.rotar:hover{
+    font-size: 48px;
+    color: lightgreen;
+}
 .cambio-letra{
     font-family: 'Hurricane', cursive;
     font-size: 25px;
@@ -1245,11 +1253,26 @@ h3{
 /*envios*/
 /*envios*/
 /*envios*/
-
+.rotacion{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: height,width, 2s;
+}
+.rotacion:hover{
+    height: 300px;
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+}
 /*contacto*/
 /*contacto*/
 /*contacto*/
 /*contacto*/
+input:focus{
+    transform: scale(2, 2);
+    border-radius: 30px;
+}
 .Contactanos{
     margin-bottom: 15px;
 }
@@ -1307,6 +1330,40 @@ label{
 /*sobre nosotros*/
 /*sobre nosotros*/
 /*sobre nosotros*/
+.lorem-nosotros{
+    background-image: linear-gradient(to right, red, orange, yellow);
+}
+.animacion{
+    text-align: center;
+    margin: 20px;
+    color: #000;
+    animation-name: animaciones;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+@keyframes animaciones{
+    0%{ 
+        color: brown;
+        font-size: large;
+    }
+    25%{
+        color: pink;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    50%{
+        color: dimgrey;
+        transform: rotate(35deg);
+    }
+    75%{
+        color: blue;
+        transform: rotate(45deg) ;
+    }
+    100%{
+        color: violet;
+        transform: rotate(-40deg);
+    }
+}
 .header-div-nosotros{
     margin: 10px;
 }
